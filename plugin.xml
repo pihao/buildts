@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.kissyid.buildts.OnStartup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.kissyid.buildts.actionSet"
+            label="Build TS Action Set"
+            visible="true">
+         <menu
+               id="buildTSMenu"
+               label="Build TS">
+            <separator
+                  name="buildTSGroup">
+            </separator>
+         </menu>
+         <action
+               class="com.kissyid.buildts.SwitcherAction"
+               id="com.kissyid.buildts.SwitcherAction"
+               label="Build TS"
+               menubarPath="Project/buildTSGroup"
+               state="true"
+               style="toggle">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>
